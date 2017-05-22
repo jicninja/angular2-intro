@@ -1,0 +1,10 @@
+.relative {
+  position: relative;
+}
+
+.weather-icon {
+  font-size: 100px;
+  position: absolute;
+  right: 15px;
+  top: 55px;
+}

@@ -1,0 +1,33 @@
+<div class="container">
+  <h3>Check your weather</h3>
+
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">
+      <span class="glyphicon glyphicon-map-marker"></span>
+    </span>
+    <input type="text" (keyup)="getWeather(city)" [(ngModel)]="city" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <p *ngIf="weather.loading">Loading</p>
+
+  <div class="panel panel-default" *ngIf="!weather.loading">
+    <div class="panel-body relative">
+      <h2>{{weather.city}}</h2>
+      <ul>
+        <li><strong>Temperature: </strong> {{weather.data.temp}} °</li>
+        <li><strong>Max temperature: </strong> {{weather.data.temp_max}} °</li>
+        <li><strong>Min temperature: </strong> {{weather.data.temp_min}} °</li>
+        <li><strong>Humidity: </strong> {{weather.data.humidity}} %</li>
+        <li><strong>Pressure: </strong> {{weather.data.pressure}} kPa</li>
+
+      </ul>
+
+
+      <div class="weather-icon">
+        <span class="glyphicon glyphicon-cloud-download"></span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
